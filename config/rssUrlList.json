@@ -1,0 +1,48 @@
+[
+    {
+        "name": "36氪",
+        "baseRank": 1,
+        "lang": "zh",
+        "feeds": {
+            "综合资讯": "https://36kr.com/feed",
+            "文章资讯": "https://36kr.com/feed-article",
+            "最新快讯": "https://36kr.com/feed-newsflash"
+        }
+    },
+    {
+        "name": "arxiv",
+        "baseRank": 2,
+        "lang": "en",
+        "feeds": {
+            "computerScience": "https://rss.arxiv.org/rss/cs"
+        }
+    },
+    {
+        "name": "虎嗅",
+        "baseRank": 1,
+        "lang": "zh",
+        "feeds": {
+            "默认": "https://plink.anyfeeder.com/huxiu"
+        }
+    },
+    {
+        "name": "知乎",
+        "baseRank": 1,
+        "lang": "zh",
+        "feeds": {
+            "默认": "https://www.zhihu.com/rss"
+        }
+    },
+    {
+        "name": "bbc",
+        "baseRank": 2,
+        "lang": "en",
+        "feeds": {
+            "world": "https://feeds.bbci.co.uk/news/world/rss.xml",
+            "business": "https://feeds.bbci.co.uk/news/business/rss.xml",
+            "technology": "https://feeds.bbci.co.uk/news/technology/rss.xml",
+            "science": "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml",
+            "politics": "https://feeds.bbci.co.uk/news/politics/rss.xml"
+        }
+    }
+]
