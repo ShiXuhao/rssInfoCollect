@@ -98,3 +98,6 @@
 2024-11-07 23:51:21,123 - INFO - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
 2024-11-07 23:51:35,325 - INFO - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
 2024-11-07 23:51:38,718 - INFO - 邮件发送成功
+2024-11-08 00:28:07,997 - ERROR - 获取数据失败: IncompleteRead(958474 bytes read)
+2024-11-08 00:29:41,710 - ERROR - 程序运行失败: 输入内容为空或少于200字,无法生成文章
+2024-11-08 00:29:44,952 - INFO - 邮件发送成功

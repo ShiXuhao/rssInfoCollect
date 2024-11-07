@@ -11,7 +11,7 @@ def load_rss_urls():
     返回: 包含RSS源信息的字典列表
     """
     try:
-        with open('config/rssUrlList.json', 'r', encoding='utf-8') as f:
+        with open('config/rssUrlListTest.json', 'r', encoding='utf-8') as f:
             return json.load(f)
     except Exception as e:
         print(f"加载RSS配置文件失败: {e}")

@@ -18,6 +18,9 @@ def create_openai_client():
 
 def essay_writer(client, item):
     item = str(item)
+    if not item or len(item) < 200:
+        raise ValueError("输入内容为空或少于200字,无法生成文章")
+        
     print("----- standard writer -----")
     user_prompt = item + generate_prompt()
     completion = client.chat.completions.create(
