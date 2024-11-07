@@ -10,14 +10,6 @@
         }
     },
     {
-        "name": "arxiv",
-        "baseRank": 2,
-        "lang": "en",
-        "feeds": {
-            "computerScience": "https://rss.arxiv.org/rss/cs"
-        }
-    },
-    {
         "name": "虎嗅",
         "baseRank": 1,
         "lang": "zh",
@@ -43,6 +35,56 @@
             "technology": "https://feeds.bbci.co.uk/news/technology/rss.xml",
             "science": "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml",
             "politics": "https://feeds.bbci.co.uk/news/politics/rss.xml"
+        }
+    },
+    {
+        "name": "阮一峰",
+        "baseRank": 1,
+        "lang": "zh",
+        "feeds": {
+            "默认": "https://feeds.feedburner.com/ruanyifeng"
+        }
+    },
+    {
+        "name": "少数派",
+        "baseRank": 1,
+        "lang": "zh",
+        "feeds": {
+            "默认": "https://sspai.com/feed"
+        }
+    },
+    {
+        "name": "极客公园",
+        "baseRank": 1,
+        "lang": "zh",
+        "feeds": {
+            "默认": "https://www.geekpark.net/rss"
+        }
+    },
+    {
+        "name": "人民日报",
+        "baseRank": 2,
+        "lang": "zh",
+        "feeds": {
+            "默认": "https://plink.anyfeeder.com/people-daily"
+        }
+    }
+    ,
+    {
+        "name": "钛媒体",
+        "baseRank": 1,
+        "lang": "zh",
+        "feeds": {
+            "默认": "https://plink.anyfeeder.com/tmtpost"
+        }
+    }
+    ,
+    {
+        "name": "arxiv",
+        "baseRank": 1,
+        "lang": "en",
+        "feeds": {
+            "默认": "https://rss.arxiv.org/rss/cs.AI"
         }
     }
 ]

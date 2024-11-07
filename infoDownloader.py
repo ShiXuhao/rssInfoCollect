@@ -2,7 +2,7 @@ import json
 import feedparser
 import uuid
 # from judgers import stringJudge as judge
-from judgers import testJudge as judge
+from _judgers import testJudge as judge
 from datetime import datetime
 
 def load_rss_urls():
@@ -115,10 +115,13 @@ def fetch_all_feeds(time_threshold_str, judge):
     with open('data/rawData.json', 'w', encoding='utf-8') as f:
         f.write(json.dumps(feed_result_list, ensure_ascii=False))
 
-if __name__ == "__main__":
-    # 获取当前时间最近一个凌晨的时间戳
+def get_today_midnight():
+    """获取当前时间最近一个凌晨的时间戳"""
     now = datetime.now()
     today_midnight = now.replace(hour=0, minute=0, second=0, microsecond=0)
-    time_threshold = today_midnight.strftime('%Y-%m-%d %H:%M:%S')
-    print(time_threshold)
+    return today_midnight.strftime('%Y-%m-%d %H:%M:%S')
+
+
+if __name__ == "__main__":
+    time_threshold = get_today_midnight()
     fetch_all_feeds(time_threshold, judge=judge)

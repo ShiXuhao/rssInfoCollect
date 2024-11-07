@@ -1,0 +1,12 @@
+[
+    {
+        "name": "36氪",
+        "baseRank": 1,
+        "lang": "zh",
+        "feeds": {
+            "综合资讯": "https://36kr.com/feed",
+            "文章资讯": "https://36kr.com/feed-article",
+            "最新快讯": "https://36kr.com/feed-newsflash"
+        }
+    }
+]
