@@ -96,5 +96,102 @@
             "ai科技评论": "https://rsshub.app/wechat/ce/58a59b3358d0f867a3332829",
             "机器之心": "https://rsshub.app/wechat/ce/5b0cc833f3a2e44bb474843d"
         }
+    },
+    {
+        "name": "techcrunch",
+        "baseRank": 1,
+        "lang": "en",
+        "feeds": {
+            "默认": "https://techcrunch.com/feed"
+        }
+    },
+    {
+        "name": "mit",
+        "baseRank": 1,
+        "lang": "en",
+        "feeds": {
+            "默认": "https://news.mit.edu/topic/mitartificial-intelligence2-rss.xml"
+        }
+    },
+    {
+        "name": "sciencedaily",
+        "baseRank": 1,
+        "lang": "en",
+        "feeds": {
+            "默认": "https://www.sciencedaily.com/rss/"
+        }
+    },
+    {
+        "name": "aiweirdness",
+        "baseRank": 1,
+        "lang": "en",
+        "feeds": {
+            "默认": "https://www.aiweirdness.com/rss/"
+        }
+    },
+    {
+        "name": "bair",
+        "baseRank": 1,
+        "lang": "en",
+        "feeds": {
+            "默认": "https://bair.berkeley.edu/blog/feed.xml"
+        }
+    },
+    {
+        "name": "becominghuman",
+        "baseRank": 1,
+        "lang": "en",
+        "feeds": {
+            "默认": "https://becominghuman.ai/feed"
+        }
+    },
+    {
+        "name": "nvidiablog",
+        "baseRank": 1,
+        "lang": "en",
+        "feeds": {
+            "默认": "https://feeds.feedburner.com/nvidiablog"
+        }
+    },
+    {
+        "name": "reddit",
+        "baseRank": 1,
+        "lang": "en",
+        "feeds": {
+            "artificial": "https://www.reddit.com/r/artificial/.rss",
+            "neuralnetworks": "https://www.reddit.com/r/neuralnetworks/.rss?format=xml"
+        }
+    },
+    {
+        "name": "vitalab",
+        "baseRank": 1,
+        "lang": "en",
+        "feeds": {
+            "默认": "https://vitalab.github.io/feed.xml"
+        }
+    },
+    {
+        "name": "karpathy",
+        "baseRank": 1,
+        "lang": "en",
+        "feeds": {
+            "默认": "https://medium.com/feed/@karpathy"
+        }
+    },
+    {
+        "name": "microsoft",
+        "baseRank": 1,
+        "lang": "en",
+        "feeds": {
+            "默认": "https://www.microsoft.com/en-us/research/feed/"
+        }
+    },
+    {
+        "name": "blogspot",
+        "baseRank": 1,
+        "lang": "en",
+        "feeds": {
+            "默认": "https://feeds.feedburner.com/blogspot/gJZg"
+        }
     }
 ]

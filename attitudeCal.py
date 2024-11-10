@@ -7,7 +7,7 @@ def get_info_impact_details(file_path):
     result = {
         'total': 0,
         'positive': [],
-        'neutral': [],
+        'neutral': [], 
         'negative': []
     }
     
@@ -34,6 +34,11 @@ def get_info_impact_details(file_path):
             
             result['total'] += 1
     
+    # Write result to json file
+    output_file = 'data/info_impact_details.json'
+    with open(output_file, 'w', encoding='utf-8') as f:
+        json.dump(result, f, ensure_ascii=False, indent=4)
+        
     return result
 
 # Example usage

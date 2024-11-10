@@ -8,7 +8,7 @@ from _jsonDecoder import json_decoder
 
 prompt = """
 ---
-判断上文是否与ai/人工智能/机器学习/深度学习产业相关，然后概括其核心事实。
+判断上文是否与ai/人工智能/机器学习/深度学习等产业相关，然后概括其核心事实。
 以如下json输出：
 ```json
 {
@@ -105,7 +105,7 @@ def process_item(item):
         new_item['final_score'] = 0
     return new_item
 
-def process_data_with_threads(raw_data, output_file, max_workers=20):
+def process_data_with_threads(raw_data, output_file, max_workers=15):
     """
     使用多线程处理数据并保存结果
     

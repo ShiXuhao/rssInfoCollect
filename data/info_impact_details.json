@@ -1,0 +1,88 @@
+{
+    "total": 10,
+    "positive": [
+        {
+            "title": "中国公司全球化周报 | 即刻报名！探索出海品牌建设之道/字节上半年国际营收增长超60%",
+            "source": "36氪",
+            "link": "https://36kr.com/p/3027701104223751?f=rss",
+            "description": "<p><strong>访问36氪出海网站&nbsp;</strong><a href=\"https://letschuhai.com/?utm_source=36kr&amp;utm_medium=sayhi&amp;utm_campaign=link\" rel=\"noopener noreferrer\" target=\"_blank\"><strong>letschuhai.com</strong></a><strong>&nbsp;，获取更多全球商业相关资讯。</strong></p>\n  <p class=\"image-wrapper\"><img src=\"https://img.36kr",
+            "keyFacts": "文章报道了中国公司的全球化动态，包括字节跳动营收增长、多家公司出海业务进展、宏观政策与行业数据、投融资事件以及近期相关活动等，其中部分公司业务涉及人工智能相关内容。",
+            "section": "文章资讯"
+        },
+        {
+            "title": "淘汰赛中紧抓窗口期，自动驾驶公司扎堆IPO",
+            "source": "虎嗅",
+            "link": "https://www.huxiu.com/article/3669486.html?f=rss",
+            "description": "",
+            "keyFacts": "2024年11月10日消息，淘汰赛中自动驾驶公司扎堆IPO，文章来源为虎嗅。",
+            "section": "默认"
+        },
+        {
+            "title": "OpenAI reportedly developing new strategies to deal with AI improvement slowdown",
+            "source": "techcrunch",
+            "link": "https://techcrunch.com/2024/11/09/openai-reportedly-developing-new-strategies-to-deal-with-ai-improvement-slowdown/",
+            "description": "<p>OpenAI’s next flagship model might not represent as big a leap forward as its predecessors, according to a new report in The Information. Employees who tested the new model, code-named Orion, reportedly found that even though its performance exceeds OpenAI’s existing models, there was less improv",
+            "keyFacts": "据报道OpenAI正在制定新策略应对AI改进放缓问题，其新模型Orion性能虽超现有模型，但进步幅度不如从前。",
+            "section": "默认"
+        },
+        {
+            "title": "The Antithesis To Skynet: An In-Depth Look",
+            "source": "reddit",
+            "link": "https://www.reddit.com/r/artificial/comments/1gnljgd/the_antithesis_to_skynet_an_indepth_look/",
+            "description": "<!-- SC_OFF --><div class=\"md\"><h2>I gave Gemini a prompt and this was the result:</h2> <p><strong>Core Principles:</strong></p> <ul> <li><p><strong>Benevolence:</strong> This AI wouldn't see humanity as a threat or a lesser species. Its primary directive would be to ensure the well-being and flouri",
+            "keyFacts": "通过Gemini的提示结果阐述了一个与Skynet相对的AI的核心原则、功能、保障措施、重要考虑因素等方面内容",
+            "section": "artificial"
+        },
+        {
+            "title": "One-Minute Daily AI News 11/9/2024",
+            "source": "reddit",
+            "link": "https://www.reddit.com/r/artificial/comments/1gns7py/oneminute_daily_ai_news_1192024/",
+            "description": "<!-- SC_OFF --><div class=\"md\"><ol> <li><strong>OpenAI</strong> reportedly developing new strategies to deal with AI improvement slowdown.[1]</li> <li>Exclusive-US ordered <strong>TSMC</strong> to halt shipments to China of chips used in AI applications.[2]</li> <li><strong>Waymo’s</strong> new AI r",
+            "keyFacts": "11月9日的每日人工智能新闻包括OpenAI应对AI改进放缓的新策略、美国令台积电停止向中国运送AI芯片、Waymo的自动驾驶AI研究成果和微软为Xbox推出AI工具包等。",
+            "section": "artificial"
+        }
+    ],
+    "neutral": [
+        {
+            "title": "鸿蒙智行一周年累计交付突破50万辆；ChatGPT大选期间拒绝25万次生成候选人假图片；星舰第6次试飞时间定了",
+            "source": "极客公园",
+            "link": "http://www.geekpark.net/news/342905",
+            "description": "<p style=\"text-align: center;\"><img src=\"https://imgslim.geekpark.net/uploads/image/file/2c/01/2c01d6193149e8207d436b8d80e2e9a4.png\" /></p>\n<h2>华为余承东：鸿蒙智行正式发布一周年，累计交付突破 50 万辆</h2>\n<p>华为常务董事、终端 BG 董事长、智能汽车解决方案 BU 董事长余承东昨日发文称，鸿蒙智行正式发布一周年，累计交付突破 50 万辆，并取得了新势力销冠、50 万以上车型销冠的双冠王。此外，他还对赛力斯、奇瑞、北汽、江淮和各位合作伙伴，",
+            "keyFacts": "文章报道了多则科技资讯，包括鸿蒙智行交付量突破、科技创新减税降费、小米手机销量、星舰试飞、eBay支持支付宝付款、OpenAI版权诉讼、谷歌更新库、微软停用应用、Google地图更新、荣耀手机销售额、微软发布Azure Linux更新、东风汽车发布芯片、ChatGPT拒绝假新闻等内容。",
+            "section": "默认"
+        },
+        {
+            "title": "大模型，智能家居的春秋战国之交",
+            "source": "钛媒体",
+            "link": "https://www.tmtpost.com/7330607.html",
+            "description": "从一盘散沙到群雄逐鹿，谁能笑到最后？",
+            "keyFacts": "文章将大模型与智能家居类比为春秋战国之交，从一盘散沙到群雄逐鹿，但未明确谁能笑到最后。",
+            "section": "默认"
+        },
+        {
+            "title": "入职仅14个月，AI大牛颜水成突然卸任昆仑万维研究院院长｜钛媒体AGI",
+            "source": "钛媒体",
+            "link": "https://www.tmtpost.com/7330901.html",
+            "description": "多位消息人士告诉钛媒体App，这项人事任命非常突然，很多内部人员事先并不知情。“昨天早晨他（颜水成）还在我们公司系统里。”",
+            "keyFacts": "多位消息人士称昆仑万维研究院院长颜水成卸任人事任命非常突然，内部人员大多事先不知情。",
+            "section": "默认"
+        },
+        {
+            "title": "当我让AI在双十一购物，为啥它们都只买电子产品啊？",
+            "source": "虎嗅",
+            "link": "https://www.huxiu.com/article/3669696.html?f=rss",
+            "description": "AI也有自己的“喜好”，甚至有些时候是刻板印象的“偏见”",
+            "keyFacts": "AI在双十一购物时只买电子产品，可能源于AI有自己的‘喜好’或者刻板印象的‘偏见’",
+            "section": "默认"
+        },
+        {
+            "title": "Another AI safety leader has quit OpenAI",
+            "source": "reddit",
+            "link": "https://www.reddit.com/r/artificial/comments/1gnolfw/another_ai_safety_leader_has_quit_openai/",
+            "description": "<table> <tr><td> <a href=\"https://www.reddit.com/r/artificial/comments/1gnolfw/another_ai_safety_leader_has_quit_openai/\"> <img alt=\"Another AI safety leader has quit OpenAI\" src=\"https://external-preview.redd.it/sxFD5GjzdIONwnaNUoRHRwW84SR0UvLItexZTbAwC1k.jpg?width=640&amp;crop=smart&amp;auto=webp&",
+            "keyFacts": "Another AI safety leader has quit OpenAI according to a Reddit post on November 10, 2024.",
+            "section": "artificial"
+        }
+    ],
+    "negative": []
+}

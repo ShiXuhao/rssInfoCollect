@@ -13,7 +13,10 @@ from datetime import datetime
 # 配置日志记录
 logging.basicConfig(filename='app.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-emailList = ["563142863@qq.com","564786816@qq.com","wjjhenry@163.com","519769912@qq.com"]
+emailList = [
+    "564786816@qq.com",
+    # "563142863@qq.com","wjjhenry@163.com","519769912@qq.com"
+    ]
 
 def send_email(subject, body, to_emails):
     from_email = "sxh035068@gmail.com"
