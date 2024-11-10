@@ -66,13 +66,17 @@ def main():
         data = json.dumps(top_30_data, ensure_ascii=False)
         essay = essay_writer(client, data)
 
+        # 获取当前时间戳
+        current_time = datetime.now().strftime("%Y-%m-%d %H:%M")
+        
         # 发送邮件
-        send_email("AI行业动态快讯", essay, emailList)
+        send_email(f"AI行业动态快讯 - {current_time}", essay, emailList)
     except Exception as e:
         logging.error(f"程序运行失败: {e}")
-        # 发送告警邮件
+        # 发送告警邮件，同样包含时间戳
+        current_time = datetime.now().strftime("%Y-%m-%d %H:%M")
         error_msg = f"程序运行失败,错误信息:\n{str(e)}"
-        send_email("AI行业动态快讯 - 运行异常", error_msg, emailList)
+        send_email(f"AI行业动态快讯 - 运行异常 - {current_time}", error_msg, emailList)
 
 if __name__ == "__main__":
     main()
