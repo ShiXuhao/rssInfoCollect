@@ -13,7 +13,7 @@ def generate_prompt():
 
 def create_openai_client():
     return OpenAI(
-        api_key="39798ab9-8c18-4918-aa76-07c1cfdcfcf7",
+        api_key=os.getenv("DOUBAO_API_KEY"),
         base_url="https://ark.cn-beijing.volces.com/api/v3",
     )
 
