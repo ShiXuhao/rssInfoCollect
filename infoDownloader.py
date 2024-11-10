@@ -3,7 +3,8 @@ import feedparser
 import uuid
 # from judgers import stringJudge as judge
 from _judgers import testJudge as judge
-from datetime import datetime
+from datetime import datetime, timedelta
+import concurrent.futures
 
 def load_rss_urls():
     """
@@ -11,7 +12,7 @@ def load_rss_urls():
     返回: 包含RSS源信息的字典列表
     """
     try:
-        with open('config/rssUrlListTest.json', 'r', encoding='utf-8') as f:
+        with open('config/rssUrlList.json', 'r', encoding='utf-8') as f:
             return json.load(f)
     except Exception as e:
         print(f"加载RSS配置文件失败: {e}")
@@ -37,8 +38,6 @@ def fetch_feed_data(url, source_name, section_name, judge, time_threshold_str=No
     """
     print(f"正在获取 {url} 的数据...")
     feed = feedparser.parse(url)
-    
-    import concurrent.futures
     
     # 如果没有提供时间阈值,则不进行时间过滤
     time_threshold = None
@@ -96,20 +95,43 @@ def fetch_all_feeds(time_threshold_str, judge):
     data = load_rss_urls()
     feed_result_list = []
     total_count = 0
+
+    # 创建任务列表
+    tasks = []
     for source in data:
-        source_count = 0
         for section_name, url in source['feeds'].items():
-            feed_result = fetch_feed_data(
-                url,
-                source['name'],
-                section_name,
-                time_threshold_str=time_threshold_str,
-                judge = judge
-            )
-            feed_result_list.extend(feed_result)
-            source_count += len(feed_result)
-        total_count += source_count
-        print(f"{source['name']} 总计获取到 {source_count} 条资讯")
+            tasks.append((url, source['name'], section_name))
+
+    # 并行执行所有任务
+    with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor:
+        future_to_task = {
+            executor.submit(
+                fetch_feed_data, 
+                url, 
+                source_name, 
+                section_name, 
+                judge,
+                time_threshold_str
+            ): (source_name, section_name) 
+            for url, source_name, section_name in tasks
+        }
+
+        # 收集结果
+        source_counts = {}
+        for future in concurrent.futures.as_completed(future_to_task):
+            source_name, section_name = future_to_task[future]
+            try:
+                result = future.result()
+                feed_result_list.extend(result)
+                count = len(result)
+                source_counts[source_name] = source_counts.get(source_name, 0) + count
+                total_count += count
+            except Exception as e:
+                print(f"获取 {source_name}-{section_name} 数据失败: {e}")
+
+        # 打印每个来源的统计信息
+        for source_name, count in source_counts.items():
+            print(f"{source_name} 总计获取到 {count} 条资讯")
     
     print(f"所有来源总计获取到 {total_count} 条资讯")
     with open('data/rawData.json', 'w', encoding='utf-8') as f:
@@ -121,7 +143,12 @@ def get_today_midnight():
     today_midnight = now.replace(hour=0, minute=0, second=0, microsecond=0)
     return today_midnight.strftime('%Y-%m-%d %H:%M:%S')
 
+def get_last_24h():
+    """获取24小时前的时间戳"""
+    now = datetime.now()
+    last_24h = now - timedelta(hours=24)
+    return last_24h.strftime('%Y-%m-%d %H:%M:%S')
 
 if __name__ == "__main__":
-    time_threshold = get_today_midnight()
+    time_threshold = get_last_24h()
     fetch_all_feeds(time_threshold, judge=judge)

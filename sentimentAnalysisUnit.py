@@ -43,7 +43,7 @@ relevance:json object，根据全文，描述此资讯与行业的相关性，�
 """
 
 client = OpenAI(
-    api_key = "9b64d9ac-3c5d-4cd6-8c04-b6381c9ce920",
+    api_key = "39798ab9-8c18-4918-aa76-07c1cfdcfcf7",
     base_url = "https://ark.cn-beijing.volces.com/api/v3",
 )
 
@@ -53,7 +53,7 @@ def sentiment_analysis(item):
     print("----- standard request -----")
     user_prompt = item+prompt
     completion = client.chat.completions.create(
-        model = "ep-20241030145809-ndcw2",  # your model endpoint ID
+        model = "ep-20241108133037-5vrjf",  # your model endpoint ID
         messages = [
             {"role": "user", "content": user_prompt},
         ],

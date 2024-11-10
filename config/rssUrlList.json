@@ -86,5 +86,21 @@
         "feeds": {
             "默认": "https://rss.arxiv.org/rss/cs.AI"
         }
+    },
+    {
+        "name": "微信公众号",
+        "baseRank": 1,
+        "lang": "zh",
+        "feeds": {
+            "量子位": "https://rsshub.app/wechat/ce/599d7c52f2145121d1aa4698",
+            "ai科技评论": "https://rsshub.app/wechat/ce/58a59b3358d0f867a3332829",
+            "机器之心": "https://rsshub.app/wechat/ce/5b0cc833f3a2e44bb474843d"
+        }
+    },
+    {   
+        "name": "中国数字时代",
+        "feeds": {
+            "默认": "http://feeds.feedburner.com/chinadigitaltimes/IyPt"
+        }
     }
 ]

@@ -1,5 +1,5 @@
 import json
-from infoDownloader import get_today_midnight, load_rss_urls, fetch_feed_data
+from infoDownloader import get_last_24h, load_rss_urls, fetch_feed_data
 from sentimentAnalysisUnit import process_data_with_threads
 from attitudeCal import get_info_impact_details
 from writer import create_openai_client, essay_writer
@@ -13,38 +13,39 @@ from datetime import datetime
 # 配置日志记录
 logging.basicConfig(filename='app.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-emailList = ["564786816@qq.com"]
+emailList = ["563142863@qq.com","564786816@qq.com","wjjhenry@163.com","519769912@qq.com"]
 
-def send_email(subject, body, to_email):
+def send_email(subject, body, to_emails):
     from_email = "sxh035068@gmail.com"
     from_password = "empa kbvk rbzg iuui"
 
-    msg = MIMEMultipart()
-    msg['From'] = from_email
-    msg['To'] = to_email
-    msg['Subject'] = subject
+    for to_email in to_emails:
+        msg = MIMEMultipart()
+        msg['From'] = from_email
+        msg['To'] = to_email
+        msg['Subject'] = subject
 
-    msg.attach(MIMEText(body, 'plain'))
+        msg.attach(MIMEText(body, 'plain'))
 
-    try:
-        server = smtplib.SMTP('smtp.gmail.com', 587)
-        server.starttls()
-        server.login(from_email, from_password)
-        text = msg.as_string()
-        server.sendmail(from_email, to_email, text)
-        server.quit()
-        logging.info("邮件发送成功")
-    except smtplib.SMTPException as e:
-        logging.error(f"邮件发送失败: {e}")
-    except Exception as e:
-        logging.error(f"未知错误: {e}")
+        try:
+            server = smtplib.SMTP('smtp.gmail.com', 587)
+            server.starttls()
+            server.login(from_email, from_password)
+            text = msg.as_string()
+            server.sendmail(from_email, to_email, text)
+            server.quit()
+            logging.info(f"邮件发送成功至 {to_email}")
+        except smtplib.SMTPException as e:
+            logging.error(f"邮件发送失败至 {to_email}: {e}")
+        except Exception as e:
+            logging.error(f"发送至 {to_email} 时发生未知错误: {e}")
 
 def main():
     try:
         # 数据下载
         rss_urls = load_rss_urls()
         all_feed_data = []
-        time_threshold = get_today_midnight()  # 获取当前时间最近一个凌晨的时间戳
+        time_threshold = get_last_24h()  # 获取24小时前的时间戳
         for source in rss_urls:
             for section, url in source['feeds'].items():
                 try:
@@ -66,12 +67,12 @@ def main():
         essay = essay_writer(client, data)
 
         # 发送邮件
-        send_email("AI行业动态快讯", essay, "564786816@qq.com")
+        send_email("AI行业动态快讯", essay, emailList)
     except Exception as e:
         logging.error(f"程序运行失败: {e}")
         # 发送告警邮件
         error_msg = f"程序运行失败,错误信息:\n{str(e)}"
-        send_email("AI行业动态快讯 - 运行异常", error_msg, "564786816@qq.com")
+        send_email("AI行业动态快讯 - 运行异常", error_msg, emailList)
 
 if __name__ == "__main__":
     main()
