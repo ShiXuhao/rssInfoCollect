@@ -82,4 +82,12 @@ def main():
         send_email(f"AI行业动态快讯 - 运行异常 - {current_time}", error_msg, emailList)
 
 if __name__ == "__main__":
-    main()
+    import schedule
+    import time
+
+    # 每天8点执行main函数
+    schedule.every().day.at("14:00").do(main)
+
+    while True:
+        schedule.run_pending()
+        time.sleep(60)  # 每分钟检查一次是否需要执行任务
